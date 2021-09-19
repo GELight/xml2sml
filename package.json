@@ -1,0 +1,49 @@
+{
+  "name": "@gelight/xml2sml",
+  "private": false,
+  "version": "0.0.1",
+  "description": "XML2SML - The XML to SML converters",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GELight/xml2sml.git"
+  },
+  "keywords": [
+    "ReliableTXT",
+    "WhitespaceSV",
+    "SimpleML",
+    "SML",
+    "Simple",
+    "Markup",
+    "Language"
+  ],
+  "author": "Mario Linz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GELight/xml2sml/issues"
+  },
+  "homepage": "https://github.com/GELight/xml2sml#readme",
+  "scripts": {
+    "dev": "nodemon --watch 'src/**/*.ts' npm run build",
+    "build": "tsc && node dist/index.js",
+    "eslint": "eslint . --ext .ts",
+    "test:unit": "tsc && jest --coverage",
+    "release": "./build-release.sh"
+  },
+  "devDependencies": {
+    "@gelight/sml": "^0.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.10",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "auto-changelog": "^2.3.0",
+    "eslint": "^7.32.0",
+    "jest": "^27.1.0",
+    "nodemon": "^2.0.12",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
