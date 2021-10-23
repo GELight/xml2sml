@@ -1,21 +1,36 @@
-import XmlToSmlConverter from "./xml2sml/XmlToSmlConverter";
+import Converter from "./xml2sml/Converter";
 
 export {
-    XmlToSmlConverter
+    Converter
 };
 
-let xml = `
-<breakfast_menu>
-    <food>
-        <name>Belgian Waffles</name>
-        <price>$5.95</price>
-        <description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
-        <calories>650</calories>
-    </food>
-</breakfast_menu>
-`;
+// const xml = `
+// <?xml version="1.0" encoding="UTF-8"?>
+// <xml xmlns="http://default.namespace.uri">
+//     <a>
+//         <b id="1">one</b>
+//         <b id="2"><![CDATA[some <cdata>]]>two</b>
+//         <ns:c xmlns:ns="http://another.namespace" ns:id="3">three</ns:c>
+//     </a>
+// </xml>
+// `;
 
-let doc = XmlToSmlConverter.convert(xml);
-let root = doc.getRoot();
+// Converter
+//     .convert(xml)
+//     .then(doc => {
+        
+//         // console.log(doc.getRoot());
+//         console.log(doc.toString());
+//         // console.log(doc.getRoot().getElement("breakfast_menu").getElement("food").getElements("item"));
+//         // console.log(doc.getRoot().getElement("breakfast_menu").getElement("food").nodes);
+        
+//         // console.log(
+//         //     doc.getRoot()
+//         //         .getElement("breakfast_menu")
+//         //         .getElement("food")
+//         //         .getElements("item")[1]
+//         //         .getAttribute("name")
+//         //         .getValues()[0]
+//         // );
 
-// console.log(root.element("food")[0].attribute("description").getValues()[0]);
+//     }).catch(e => console.log(e));
