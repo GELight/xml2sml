@@ -1,7 +1,7 @@
 {
   "name": "@gelight/xml2sml",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.5.0",
   "description": "XML2SML - The XML to SML converters",
   "main": "dist/index.js",
   "unpkg": "releases/xml2sml-client.min.js",
