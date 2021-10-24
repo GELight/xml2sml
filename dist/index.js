@@ -4,10 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Converter = void 0;
-const Converter_1 = __importDefault(require("./xml2sml/Converter"));
+const Converter_1 = __importDefault(require("./node/xml2sml/Converter"));
 exports.Converter = Converter_1.default;
 // const xml = `
-// <?xml version="1.0" encoding="UTF-8"?>
 // <xml xmlns="http://default.namespace.uri">
 //     <a>
 //         <b id="1">one</b>
@@ -16,8 +15,14 @@ exports.Converter = Converter_1.default;
 //     </a>
 // </xml>
 // `;
+// /**
+//  * Possible options on related github package 'xml2js'.
+//  * 
+//  * Github: https://github.com/Leonidas-from-XIV/node-xml2js#options
+//  */
+// const options = {};
 // Converter
-//     .convert(xml)
+//     .convert(xml, options)
 //     .then(doc => {
 //         // console.log(doc.getRoot());
 //         console.log(doc.toString());

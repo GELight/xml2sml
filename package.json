@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "description": "XML2SML - The XML to SML converters",
   "main": "dist/index.js",
-  "unpkg": "releases/xml2sml.min.js",
-  "jsdelivr": "releases/xml2sml.min.js",
+  "unpkg": "releases/xml2sml-client.min.js",
+  "jsdelivr": "releases/xml2sml-client.min.js",
   "browser": {
     "fs": false,
     "path": false,
@@ -32,7 +32,8 @@
   "homepage": "https://github.com/GELight/xml2sml#readme",
   "scripts": {
     "dev": "nodemon --watch 'src/**/*.ts' && npm run build",
-    "build": "tsc && node dist/index.js",
+    "build": "tsc && node dist/index.js && npm run bundle",
+    "bundle": "webpack --config webpack.config.js",
     "eslint": "eslint . --ext .ts",
     "test:unit": "tsc && jest --coverage",
     "release": "./build-release.sh"
@@ -47,10 +48,14 @@
     "jest": "^27.1.0",
     "nodemon": "^2.0.12",
     "ts-jest": "^27.0.5",
-    "typescript": "^4.4.2"
+    "typescript": "^4.4.2",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "xmltojson": "^1.3.5"
   },
   "files": [
-    "dist"
+    "dist",
+    "releases"
   ],
   "dependencies": {
     "@gelight/json2sml": "^1.0.1",

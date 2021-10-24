@@ -1,11 +1,10 @@
-import Converter from "./xml2sml/Converter";
+import Converter from "./node/xml2sml/Converter";
 
 export {
     Converter
 };
 
 // const xml = `
-// <?xml version="1.0" encoding="UTF-8"?>
 // <xml xmlns="http://default.namespace.uri">
 //     <a>
 //         <b id="1">one</b>
@@ -15,8 +14,16 @@ export {
 // </xml>
 // `;
 
+// /**
+//  * Possible options on related github package 'xml2js'.
+//  * 
+//  * Github: https://github.com/Leonidas-from-XIV/node-xml2js#options
+//  */
+
+// const options = {};
+
 // Converter
-//     .convert(xml)
+//     .convert(xml, options)
 //     .then(doc => {
         
 //         // console.log(doc.getRoot());
